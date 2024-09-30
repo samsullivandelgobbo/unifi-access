@@ -297,6 +297,12 @@ export class AccessApi extends EventEmitter {
     // Set the list of floors as a convenience.
     this._floors = this._bootstrap?.floors ?? null;
 
+    this._bootstrap?.device_groups.flat().map((d) => {
+
+      this._devices?.push(d);
+
+    });
+
     // If we're boostrapped, connect to the event listener API. Otherwise, we're done.
     if(!this._bootstrap || !(await this.launchEventsWs())) {
 

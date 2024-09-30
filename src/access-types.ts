@@ -82,6 +82,7 @@ export interface AccessBootstrapConfigInterface {
   up_id: string,
   work_time_id: string,
   work_time: string[]
+  device_groups: AccessDeviceConfigInterface[][],
 }
 
 // An semi-complete description of the UniFi Access controller JSON.
